@@ -17,6 +17,8 @@
 </head>
 
 <body>
+
+<!-- Main Navigation Bar -->
 <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -31,7 +33,7 @@
                 <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-book fa-lg"></span> Contact</a></li>
             </ul>
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span> Login</a>
+                <a id="loginButton"><span class="fa fa-sign-in"></span> Login</a>
             </span>
         </div>
     </div>
@@ -162,8 +164,7 @@
                 <img src="img/logo.png" class="img-fluid">
             </div>
             <div class="col-12 col-sm align-self-center">
-                <button type="button" class="btn btn-sm btn-block btn-warning"
-                data-toggle="modal" data-target="#reserveTableModal">Reserve Table</button>
+                <button id="reserveTableButton" type="button" class="btn btn-sm btn-block btn-warning">Reserve Table</button>
             </div>
         </div>
     </div>
@@ -345,6 +346,7 @@
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+<!-- Carousel Script -->
 <script>
     $(document).ready(function(){
         $("#mycarousel").carousel( { interval: 2000 } );
@@ -360,6 +362,24 @@
             }
         });
     });
+</script>
+
+<!-- Reserve Table Modal Script -->
+<script>
+  $('#reserveTableButton').click(function() {
+    $('#reserveTableModal').modal({
+      show: true
+    });
+  });
+</script>
+
+<!-- Login Modal Script -->
+<script>
+  $('#loginButton').click(function() {
+    $('#loginModal').modal({
+      show: true
+    });
+  });
 </script>
 
 </body>
